@@ -1,0 +1,126 @@
+ {{!-- <img src="{{data.poster}}" alt="{{data.title}} Poster">
+
+    <div class="movie-info">
+      <p><strong>Genres:</strong> {{#each data.genres}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+      <p><strong>Runtime:</strong> {{data.runtime}} minutes</p>
+      <p><strong>Released:</strong> {{data.released.$date.$numberLong}}</p>
+      <p><strong>Director:</strong> {{#each data.directors}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+      <p><strong>IMDb Rating:</strong> {{data.imdb.rating}}</p>
+      <p><strong>Tomatoes Viewer Rating:</strong> {{data.tomatoes.viewer.rating}}</p>
+      <p><strong>Language:</strong> {{#each data.languages}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+    </div>
+
+    <div class="plot">
+      <h2>Plot</h2>
+      <p>{{data.fullplot}}</p>
+
+      <form action="/api/movie_delete/{{data._id}}" method="POST">
+    <!-- Replace "/delete" with the actual endpoint where you handle the delete action -->
+    <!-- You may also use the method "DELETE" instead of "POST" if your server supports it -->
+    <button type="submit">Delete</button>
+  </form>
+    </div> --}}
+
+    {{!-- <div class="movie-container">
+  <img src="{{data.poster}}" alt="{{data.title}} Poster">
+
+  <div class="movie-info">
+    <p><strong>Genres:</strong> {{#each data.genres}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+    <p><strong>Runtime:</strong> {{data.runtime}} minutes</p>
+    <p><strong>Released:</strong> {{data.released.$date.$numberLong}}</p>
+    <p><strong>Director:</strong> {{#each data.directors}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+    <p><strong>IMDb Rating:</strong> {{data.imdb.rating}}</p>
+    <p><strong>Tomatoes Viewer Rating:</strong> {{data.tomatoes.viewer.rating}}</p>
+    <p><strong>Language:</strong> {{#each data.languages}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+  </div>
+
+  <div class="plot">
+    <h2>Plot</h2>
+    <p>{{data.fullplot}}</p>
+
+    <form action="/api/movie_delete/{{data._id}}" method="POST">
+      <!-- Replace "/delete" with the actual endpoint where you handle the delete action -->
+      <!-- You may also use the method "DELETE" instead of "POST" if your server supports it -->
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+</div> --}}
+
+{{!-- <div class="movie-container">
+  <div class="image-wrapper">
+    {{!-- <img src="{{data.poster}}" alt="{{data.title}} Poster"> --}}
+     {{!-- <img src="{{data.poster}}" alt="{{data.title}} Poster" class="movie-poster">
+  </div>
+
+  <div class="details-container">
+    <div class="movie-info">
+      <p><strong>Genres:</strong> {{#each data.genres}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+      <p><strong>Runtime:</strong> {{data.runtime}} minutes</p>
+      <p><strong>Released:</strong> {{data.released.$date.$numberLong}}</p>
+      <p><strong>Director:</strong> {{#each data.directors}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+      <p><strong>IMDb Rating:</strong> {{data.imdb.rating}}</p>
+      <p><strong>Tomatoes Viewer Rating:</strong> {{data.tomatoes.viewer.rating}}</p>
+      <p><strong>Language:</strong> {{#each data.languages}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+    </div>
+
+    <div class="plot">
+      <h2>Plot</h2>
+      <p>{{data.fullplot}}</p>
+
+<div class="row row-cols-lg-auto g-3 align-items-center">
+
+      <form action="/api/movie_delete/{{data._id}}" method="POST">
+        <!-- Replace "/delete" with the actual endpoint where you handle the delete action -->
+        <!-- You may also use the method "DELETE" instead of "POST" if your server supports it -->
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+
+      <form action="/api/movie_update/{{data._id}}" method="POST">
+        <!-- Replace "/delete" with the actual endpoint where you handle the delete action -->
+        <!-- You may also use the method "DELETE" instead of "POST" if your server supports it -->
+        <button type="submit" class="btn btn-warning">Update</button>
+      </form>
+      </div>
+    </div>
+
+   
+  </div>
+</div> --}}
+
+
+<div class="translucent-box">
+  <div class="movie-container">
+    <div class="image-wrapper">
+      <img src="{{data.poster}}" alt="{{data.title}} Poster" class="movie-poster">
+    </div>
+
+    <div class="details-container">
+      <div class="movie-info">
+        <p><strong>Genres:</strong> {{#each data.genres}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+        <p><strong>Runtime:</strong> {{data.runtime}} minutes</p>
+        <p><strong>Released:</strong> {{data.released.$date.$numberLong}}</p>
+        <p><strong>Director:</strong> {{#each data.directors}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+        <p><strong>IMDb Rating:</strong> {{data.imdb.rating}}</p>
+        <p><strong>Tomatoes Viewer Rating:</strong> {{data.tomatoes.viewer.rating}}</p>
+       
+        <p><strong>Language:</strong> {{#each data.languages}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+      </div>
+
+      <div class="plot">
+        <h2>Plot</h2>
+        <p>{{data.fullplot}}</p>
+
+        <div class="row row-cols-lg-auto g-3 align-items-center">
+          <form action="/api/movie_delete/{{data._id}}" method="POST">
+            <button type="submit" class="btn btn-outline-dark">Delete</button>
+          </form>
+
+          <form action="/api/movie_update/{{data._id}}" method="POST">
+            <button type="submit" class="btn btn-outline-light">Update</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

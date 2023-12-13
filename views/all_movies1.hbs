@@ -1,0 +1,73 @@
+<!-- all_movies.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content goes here -->
+     <style>
+        body{
+            color: white;
+          background-blend-mode: darken;
+        }
+  
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            height: 300px;
+        }
+
+        .movie {
+            height: 300px;
+            width: 300px;
+            background-color: #1f0505eb;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .movie img {
+            width: 100%;
+            height: 70%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .movie h2 {
+            height: 20%;
+            padding: 10px;
+             word-wrap: break-word;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .movie p {
+            padding: 10px;
+            margin: 0;
+            font-size: 0.9;
+        }
+    </style>
+</head>
+<body>
+    {{#each groupedMovies}}
+        <div class="category-container">
+            <div class="category-title">{{this.name}}</div>
+            <div class="movie-container">
+                {{#each this.movies}}
+                    <div class="movie">
+                        <!-- Render movie details as needed -->
+                          <img src="{{this.poster}}" onerror="this.src='/images/bgf.jpg';">
+                            <h2>{{this.title}}</h2>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    {{/each}}
+</body>
+</html>

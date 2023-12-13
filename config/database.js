@@ -1,3 +1,6 @@
+require('dotenv').config()
+const mongo = process.env.MONGODB_URI;
+
 module.exports = {
-    url : "mongodb://localhost:27017/Employees"
+    url: mongo + "sample_mflix"
 };

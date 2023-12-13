@@ -1,0 +1,78 @@
+<!-- search_movies.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content goes here -->
+    <style>
+        .movies-container {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            height: 300px;
+        }
+
+        .movie {
+            height: 300px;
+            width: 300px;
+            background-color: #1f0505eb;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .movie img {
+            width: 100%;
+            height: 70%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .movie h2 {
+            height: 20%;
+            padding: 10px;
+             word-wrap: break-word;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .movie p {
+            padding: 10px;
+            margin: 0;
+            font-size: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Movies</h1>
+    <form action="/searchMovies" method="GET">
+        <label for="page">Page:</label>
+        <input type="number" name="page" id="page" value="{{currentPage}}" required>
+
+        <label for="perPage">Per Page:</label>
+        <input type="number" name="perPage" id="perPage" value="{{perPage}}" required>
+
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="{{title}}" required>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="movies-container">
+        {{#each movies}}
+            <div class="movie">
+                <!-- Render movie details as needed -->
+                 <img src="{{this.poster}}" onerror="this.src='/images/bgf.jpg';">
+                <h2>{{this.title}}</h2>
+                
+            </div>
+        {{/each}}
+    </div>
+
+    
+
+    <!-- Your other content goes here -->
+</body>
+</html>
