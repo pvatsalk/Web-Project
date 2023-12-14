@@ -34,7 +34,7 @@ const ITEMS_PER_PAGE = 10;
 
 const user = {
   username: "vatsal",
-  password: "vatsal",
+  password: "drashti",
   email: "vatsal@gmail.com"
 };
 
